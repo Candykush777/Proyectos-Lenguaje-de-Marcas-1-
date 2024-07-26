@@ -1,0 +1,42 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 27 feb 2024, 17:03:16
+    Author     : Edu
+*/
+.header {
+    background-color: #223; /* Cambia el color de fondo a oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    width: 100%; /* Establece el ancho al 100% del ancho de la ventana */
+    top: 0; /* Coloca la barra de navegación en la parte superior */
+    left: 0; /* Asegura que la barra de navegación esté alineada a la izquierda */
+    z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
+}
+
+.header a {
+    color: white;/* Establece el color del texto de los enlaces a blanco */
+    text-decoration: none;/* Elimina la decoración del texto de los enlaces */
+    margin: 0 20px;/* Establece un margen de 0 en la parte superior e inferior y 20px en los lados izquierdo y derecho de los enlaces */
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+body {
+   margin: 0; /* Establece el margen exterior del cuerpo a 0 */
+padding: 0; /* Establece el relleno interior del cuerpo a 0 */
+height: 100vh; /* Establece la altura del cuerpo al 100% de la altura de la ventana del navegador */
+background-image: url('im.jpg'); /* Establece una imagen de fondo */
+background-size: cover; /* Escala la imagen de fondo para cubrir todo el contenedor */
+background-position: center; /* Centra la imagen de fondo horizontalmente y verticalmente */
+background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+display: flex; /* Utiliza el modelo de caja flexible para el diseño */
+justify-content: center; /* Centra horizontalmente los elementos flexibles */
+align-items: center; /* Centra verticalmente los elementos flexibles */
+}

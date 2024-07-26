@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+<head>      
+    <title>Formulario interactivo</title>
+    <link href="Estilo_formulario.css" rel="stylesheet" type="text/css"><!--Para que conecta con nuestro css, le llamamos con el link y el nombre del archivo en al misma carpeta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Inicio.html" rel="stylesheet">
+     <!--Para llamar a la página que quiero que salga al enviar el Cv y aparezca inicio sesion-->
+     
+      <script>//Aquí hemos hecho el script, le hemos metido las condiciones necesarias para cumplir con lo estipulado en la evaluable.
+        function verificarContraseña() {
+            var contraseña = document.getElementById("contraseña").value;//document.getElementById("contraseña") es una expresión en JavaScript que 
+            //busca en el documento HTML un elemento cuyo atributo id sea "contraseña". 
+            var confirmarContraseña = document.getElementById("confirmar_contraseña").value;//igual que lo anterior pero con validar contraseña
+            
+            // Verificar longitud mínima
+            if (contraseña.length < 8) {
+                alert("La contraseña debe tener al menos 8 caracteres.");
+                return false;
+            }
+
+            // Verificar si las contraseñas coinciden
+            if (contraseña !== confirmarContraseña) {
+                alert("Las contraseñas no coinciden. Por favor, verifica.");
+                return false;
+            }
+
+            // Verificar si la contraseña contiene al menos un carácter especial(no sé si hay una expresión que sean todos los caracteres especiales)
+            var caracteresEspeciales = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (!caracteresEspeciales.test(contraseña)) {
+                alert("La contraseña debe contener al menos un carácter especial.");
+                return false;
+            }
+
+            // Las contraseñas coinciden y cumplen con los requisitos
+            return true;
+        }
+        function enviarFormulario() {
+            if (verificarContraseña()) {
+                // Mostrar mensaje de confirmación del envío
+                alert("Confirmación del envío");
+                return true; // Permite enviar el formulario
+            } 
+                return false; // Evita que el formulario se envíe si hay errores
+            }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Usuarios</h1>
+        <form action="Inicio.html" onsubmit="return enviarFormulario()"><!--onsubmit especifica el código JavaScript que se ejecutará cuando se envíe el formulario. En este caso, cuando el formulario se envíe, 
+            se llamará a la función enviarFormulario(). El formulario se enviará si esta función devuelve true, y no se enviará si devuelve false-->
+            <label for="nombre">Nombre completo:</label><!-- Bueno aquí con los required, validaciones necesarias cómo en evaluable 1er trimestre-->
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required> 
+            <label for="confirmar_contraseña">Confirmar contraseña:</label> 
+            <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required> 
+             <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+             <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="input-small" required><!--He creado la clase input-small para poder definirla en css y hacer este input mas pequeño cómo se requeria -->
+             <label for="pais_residencia">País de Residencia:</label> 
+            <select id="pais_residencia" name="pais_residencia"> 
+                <option value="Alemania">Alemania</option><!-- Desplegables con option value y select -->
+    <option value="Argentina">Argentina</option>
+    <option value="Arabia Saudita">Arabia Saudita</option>
+    <option value="Australia">Australia</option>
+    <option value="Austria">Austria</option>
+    <option value="Bélgica">Bélgica</option>
+    <option value="Brasil">Brasil</option>
+    <option value="Canadá">Canadá</option>
+    <option value="Chile">Chile</option>
+    <option value="China">China</option>
+    <option value="Corea del Sur">Corea del Sur</option>
+    <option value="España">España</option>
+    <option value="Estados Unidos">Estados Unidos</option>
+    <option value="Francia">Francia</option>
+    <option value="India">India</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Italia">Italia</option>
+    <option value="Japón">Japón</option>
+    <option value="Malasia">Malasia</option>
+    <option value="México">México</option>
+    <option value="Noruega">Noruega</option>
+    <option value="Países Bajos">Países Bajos</option>
+    <option value="Polonia">Polonia</option>
+    <option value="Reino Unido">Reino Unido</option>
+    <option value="Rusia">Rusia</option>
+    <option value="Singapur">Singapur</option>
+    <option value="Suecia">Suecia</option>
+    <option value="Suiza">Suiza</option>
+    <option value="Turquía">Turquía</option>
+    <option value="Vietnam">Vietnam</option>
+                 
+             </select>
+            
+            <br>
+            <label for="genero">Elige tu género</label><!-- Igual que pais de residencia -->
+               <select id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            <input type="checkbox" id="terminos_condiciones" name="terminos_condiciones"  required><!-- un required para el check, no se puede continuar sin el -->
+            <label for="terminos_condiciones">Acepto los términos y condiciones</label>
+            <br>
+            <input type="submit" value="Enviar" class="boton-enviar">
+            <br>
+           
+        </form>
+    </div>
+</body>
+</html>

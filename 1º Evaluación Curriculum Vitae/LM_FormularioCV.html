@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"> <!--UTF-8 es un formato de codificación de caracteres Unicode-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--La etiqueta <meta> que proporcionaste se utiliza en HTML y está relacionada con la configuración de la vista en 
+        dispositivos móviles. Especifica cómo el contenido de la página web debe ajustarse y escalar en dispositivos con diferentes
+        tamaños de pantalla y resoluciones.
+        width=device-width: Hace que el ancho del contenido se ajuste al ancho del dispositivo.
+        initial-scale=1.0: Establece el nivel de escala inicial de la página. Un valor de 1.0 significa que la página se mostrará sin ninguna escala inicial.-->
+        <title>Ejercicio CV</title> <!--Es el nombre que sale arriba en la pestaña del trabajo que vas a relizar-->
+        <link href="Estiloformulario.css" rel="stylesheet" type="text/css"> <!--Para llamar al css que he creado para los estilos etc--> 
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+        <!-- Según el tutorial de google recaptcha es necesario, junto con una clave que hay más abajo para que conecte y funcione 
+        con su seguridad, hice uno real con una cuenta que me creé -->
+        <link href="Mensaje.html" rel="stylesheet" > <!--Para llamar a la página que quiero que salga al enviar el Cv y me diga
+                                                     que se ha relizado correctamente-->
+        
+    </head>
+    <body>
+        
+             <h1>Rellenar Curriculum Vitae</h1> 
+       
+           
+            
+             <form action="Mensaje.html" ><!--Para que llame a  la página creada html al enviar el Cv corretamente  -->
+                 
+ 
+         <fieldset>
+             
+           
+            
+              <legend><h2>Introducir Datos personales</h2></legend>
+              
+              
+             
+             </div>
+             <p>Nombre: <input type="text" name="nombre" size="15" autofocus required=""/></p><!--<!-- autofocus lo que hace es poner el cursor en Nombre al iniciar la página 
+             y es muy cómodo para empezar a rellenar los datos-->
+   <p>Apellidos: <input type="text" name="apellidos" size="40" required=""/></p> 
+   <p>e-mail: <input type="email" name="email" size="40" required=""/></p>
+   <p>Telefono: <input type="tel" name="teléfono" size="20" required=""/></p>
+   <p>Fecha Nacimiento: <input type="date" name="Fecha" required=""</p>
+   <p>DNI: <input type="text" name="dni" pattern="[0-9]{8}[A-Za-z]" title="Formato válido: 12345678A" required/></p>
+   
+   
+          <!--Usamos required al final, y en type lo que queremos que se rellene, 
+       si es texto, tlf o email, sino hay una @ por ejmplo, no te dejará comtinuar, 
+       da seguridad de que los datos estén correctos, en el DNI hemos tenido que darle unas instruciones sencillas 
+          pattern="[0-9]{8}[A-Za-z]": Esta expresión  especifica un patrón para el campo,este patrón espera 8 dígitos seguidos de una letra (mayúscula o minúscula). -->  
+          <label for="provincia" style="margin-bottom: 20px;">Provincia</label><!--se utiliza para aplicar estilos en línea al elemento. En este caso, se está aplicando
+                                                                               un margen inferior de 20 píxeles a la etiqueta.  -->
+            <select id="provincia" name="provincia" style="margin-bottom: 20px;">
+                <option value="" selected="selected">- selecciona -</option>
+            <option value="02">Albacete</option><!-- Es una etiqueta que se utiliza dentro de un elemento <select> para definir cada opción en un menú desplegable. -->
+    <option value="03">Alicante/Alacant</option><!-- Este atributo value define el valor que se enviará al servidor cuando el usuario seleccione esta opción.  -->
+    <option value="04">Almería</option>
+    <option value="33">Asturias</option>
+    <option value="05">Ávila</option>
+    <option value="06">Badajoz</option>
+    <option value="07">Balears (Illes)</option>
+    <option value="08">Barcelona</option>
+    <option value="09">Burgos</option>
+    <option value="10">Cáceres</option>
+    <option value="11">Cádiz</option>
+    <option value="12">Cantabria</option>
+    <option value="13">Castellón/Castelló</option>
+    <option value="14">Ceuta</option>
+    <option value="15">Ciudad Real</option>
+    <option value="16">Córdoba</option>
+    <option value="17">Coruña (A)</option>
+    <option value="18">Cuenca</option>
+    <option value="19">Girona</option>
+    <option value="20">Granada</option>
+    <option value="21">Guadalajara</option>
+    <option value="22">Guipúzcoa/Gipuzkoa</option>
+    <option value="23">Huelva</option>
+    <option value="24">Huesca</option>
+    <option value="25">Jaén</option>
+    <option value="26">León</option>
+    <option value="27">Lugo</option>
+    <option value="28">Lleida</option>
+    <option value="29">Madrid</option>
+    <option value="30">Málaga</option>
+    <option value="31">Melilla</option>
+    <option value="32">Murcia</option>
+    <option value="33">Navarra</option>
+    <option value="34">Ourense</option>
+    <option value="35">Palencia</option>
+    <option value="36">Palmas (Las)</option>
+    <option value="37">Pontevedra</option>
+    <option value="38">Rioja (La)</option>
+    <option value="39">Salamanca</option>
+    <option value="40">Santa Cruz de Tenerife</option>
+    <option value="41">Segovia</option>
+    <option value="42">Sevilla</option>
+    <option value="43">Soria</option>
+    <option value="44">Tarragona</option>
+    <option value="45">Teruel</option>
+    <option value="46">Toledo</option>
+    <option value="47">Valencia/València</option>
+    <option value="48">Valladolid</option>
+    <option value="49">Vizcaya/Bizkaia</option>
+    <option value="50">Zamora</option>
+    <option value="51">Zaragoza</option>
+        
+         </select>
+        
+        <br/><!--  -->
+        
+        <p>Cargar tu foto Cv</p>
+        
+    <form action="procesar_formulario.php" method="post" enctype="multipart/form-data">
+        <label for="imagen">Seleccionar imagen:</label> <!-- Este atributo action especifica la URL a la que se enviarán los datos del formulario cuando el usuario lo envíe.
+        el código de abajo detalla la manera sencilla de cargar una imgagen por parte de la persona que esté rellenando el Cv-->
+        <input type="file" id="imagen" name="imagen" accept="image/*" required>
+        
+        <br/><br/>
+        
+      <label for="EsperienciaLaboral" style="display: block; margin-bottom: 10px;">Experiencia Laboral</label>
+<select id="EsperienciaLaboral" name="EsperienciaLaboral" style="margin-bottom: 20px;" size="5"><!--Con   -->
+      <!--style se utiliza para aplicar estilos en línea al elemento. En este caso, se está aplicando un margen inferior de 20 píxeles a la etiqueta.-->
+          <option value="3105">Bases de Datos y CRM</option>
+    <option value="3106">Programador senior</option>
+    <option value="3107">Programador junior</option>
+    <option value="3108">Calidad</option>
+    <option value="3109">ERP, CRM, Business Intelligence</option>
+    <option value="3110">Project Manager</option>
+    <option value="3111">Hardware, redes y seguridad</option>
+    <option value="3112">Helpdesk</option>
+    <option value="3113">Ubuntu</option>
+    <option value="3114">Diseñador web</option>
+  </select>
+
+       <br/><br/>
+       
+        <label for="Estudios" style="display: block; margin-bottom: 10px;">Educación</label>
+<select id="Estudios" name="Estudios" style="margin-bottom: 20px;" size="5">
+      
+          <option value="3105">Bachiller</option>
+    <option value="3106">Grado Medio</option>
+    <option value="3107">Grado Superior</option>
+    <option value="3108">Diplomatura</option>
+    <option value="3109">Licenciatura</option>
+    <option value="3110">ESO</option>
+    <option value="3111">Doctorado</option>
+    <option value="3112">Doble Licenciatura</option>
+    <option value="3113">Licenciatura Bilingüe</option>
+    <option value="3114">Diplomatura Bilingüe</option>
+  </select>
+       
+
+       
+             <br/><br/> 
+             
+             <div>
+            
+       
+ Nivel Idiomas
+  
+ <br/><br/> 
+  
+        <input name="idiomas" type="checkbox" value="ingles b2"/>Ingles B2
+        <input name="idiomas" type="checkbox" value="ingles c1"/>Ingles C1
+        <input name="idiomas" type="checkbox" value="ingles c2"/>Ingles C2
+       <input name="idiomas" type="checkbox" value="frances b2"/>Frances B2
+       <input name="idiomas" type="checkbox" value="frances c2"/>Frances C1
+       <input name="idiomas" type="checkbox" value="aleman b2"/>Aleman B2
+       <input name="idiomas" type="checkbox" value="aleman c1"/>Aleman C1
+       <input name="idiomas" type="checkbox" value="chino b2"/>Chino B2
+       <input name="idiomas" type="checkbox" value="chino c1"/>Chino C1
+       <!-- Aquí estamos usando de forma sencilla un checkbox para que se puedan selecionar varios idiomas, haciendo click en la casilla correspondiente  -->
+             <br/>
+                              
+      
+     </div>
+             
+        
+             <br>
+   <div>
+     <label for="Sexo" style="display: block; margin-bottom: 1px;">Sexo</label><br>
+    <input type="radio" name="sexo" value="V"/> Hombre<br><!-- type="radio": Indica que este es un botón de opción tipo radio, para crear botones 
+    de opción de formularios,name="sexo": Asigna el nombre "sexo" al grupo de botones de opción. Cuando varios botones de opción tienen el mismo nombre,
+    se agrupan y permiten al usuario seleccionar solo una opción de ese grupo. -->
+    <input type="radio" name="sexo" value="M"/> Mujer
+</div>
+       
+  
+  
+   
+   <div>
+        
+       
+       <p><label for="presentacion">Carta presentacion:</label>
+           <br><br/>
+        
+        <textarea id="presentacion" name="presentacion" rows="4" cols="100"></textarea><br><br></p>
+       </div><!-- es común en formularios web cuando se necesita que los usuarios ingresen información más extensa,
+       rows es la altura del área de texto, y cols  el ancho del área de texto-->
+   
+        <div class="mb-3"> <!--Lo que me mando hacer el turotial, con la clave segura, que me generó  -->
+            <div class="g-recaptcha" data-sitekey="6LfMDRkpAAAAAGisSZy-ZXrtk6jtvBstkOL0PwR0">
+                <!-- clases son identificadores que se utilizan para aplicar estilos CSS por ejemplo,  -->
+            </div>
+
+            <br>
+
+           
+            <p><input type="submit" value="Enviar Cv" id="enviarBtn"> <!--Aquí he creado el botón de enviar Cv, con sybmit  -->
+               <input type="reset" value="Limpiar todo"></p><!--Esto nos vale para limpiar los campos si queremos rellenar el Cv de nuevo-->
+            
+        
+         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+        </form>
+        </fieldset>
+    </body>
+</html>

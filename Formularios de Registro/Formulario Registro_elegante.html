@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+
+    <style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+
+
+
+        }
+
+        .container {
+
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 5px;
+            border: solid 2px #c7c2c2;
+            background-color: rgb(243, 233, 223);
+            box-shadow: 5px 5px 1px #ada9a9;
+        }
+
+        .form-container {
+
+            padding: 15px;
+            margin-bottom: 10px;
+
+
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"] {
+
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            width: 100%;
+
+
+        }
+
+        [type="submit"] {
+            font-weight: bold;
+            background-color: rgb(66, 174, 224);
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Formulario de Registro</h2>
+        </div>
+
+        <div class="form-container">
+            <form id="registration-form">
+
+                <input type="text" id="name" placeholder="Nombre">
+                <input type="email" id="email" placeholder="Correo electrónico">
+                <input type="submit" value="Enviar" onclick="submitForm()">
+
+            </form>
+
+            <div id="welcome-message"></div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function submitForm() {
+
+
+            const nameInput = document.getElementById('name').value;
+
+            const welcomeMessage = document.getElementById('welcome-message');
+
+            welcomeMessage.textContent = `¡Bienvevido ${nameInput}, Gracias por registrate!`
+
+            welcomeMessage.style.display = 'block';
+
+            welcomeMessage.style.color = 'red';
+
+            event.preventDefault();
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

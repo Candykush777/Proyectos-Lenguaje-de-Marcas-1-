@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 25 nov 2023, 20:36:45
+    Author     : Edu
+*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #D5EBCE /* Color de fondo del cuerpo*/
+        
+        /*display: flex;: Esta propiedad establece el contenedor (en este caso, el cuerpo <body>) como un contenedor flexible. 
+        Flexbox es un modelo de diseño que permite organizar los elementos de una manera más eficiente.
+
+justify-content: center;: Dentro del contenedor flexible, esta propiedad alinea los elementos a lo largo del eje principal en el centro.
+        En este caso, alinea el contenido horizontalmente al centro.
+
+align-items: center;: Dentro del contenedor flexible, esta propiedad alinea los elementos a lo largo del eje transversal en el centro.
+        En este caso, alinea el contenido verticalmente al centro.
+
+height: 100vh;: Establece la altura del contenedor al 100% del alto de la ventana (vh significa "viewport height" o "altura de la ventana").
+        Esto asegura que el contenedor ocupe toda la altura visible de la ventana del navegador.
+
+margin: 0;: Elimina los márgenes predeterminados del cuerpo. Algunos navegadores aplican márgenes predeterminados al cuerpo, y esto asegura que no haya márgenes.
+*/}
+
+
+.mensaje-container {
+    text-align: center;
+    padding: 60px; /*significa que se está aplicando un relleno de 60 píxeles a todos los lados del elemento al que se le aplica esta regla CSS.*/
+    border: 5px solid #000000; /* Borde negro */
+    border-radius: 10px;/*significa que se están redondeando las esquinas del elemento con un radio de 10 píxeles.*/
+    background-color: #3498db; /* Fondo azul */
+    color:#000000 ; /* Texto en color negro */
+    margin: 20px
+          
+}
+button {border-radius: 2px;}

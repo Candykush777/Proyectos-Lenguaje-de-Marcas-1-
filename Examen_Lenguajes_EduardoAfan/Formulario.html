@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            border: 2px solid #ccc;
+            background-color: #f6efda;
+            border-radius: 5px;
+            
+
+        
+
+
+
+
+        }
+
+        .form-container {
+
+            margin-bottom: 20px;
+            padding: 20px;
+
+
+
+
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"] {
+
+
+            margin-bottom: 10px;
+
+            width: 100%;
+
+            padding: 10px;
+
+            box-sizing: border-box;
+
+
+
+
+
+        }
+
+        input[type="submit"] {
+
+            background-color: rgb(35, 154, 234);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h2>Formulario de Registro</h2>
+
+        </div>
+
+        <div class="form-container">
+            <form class="registration-form" id="registration-form">
+                <input type="text" id="name" placeholder="Nombre">
+                <input type="email" id="email" placeholder="Correo Electrónico">
+                <input type="submit" value="Enviar" onclick="submitForm()">
+            </form>
+
+            <div id="welcome-message"></div>
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function submitForm() {
+
+            const nameInput = document.getElementById('name').value;
+
+            const welcomeMessage = document.getElementById('welcome-message');
+
+            welcomeMessage.textContent = `¡Bienvenido ${nameInput}, Gracias por registrarte!`;
+
+            welcomeMessage.style.display = 'block';
+
+            welcomeMessage.style.color = 'red';
+
+            event.preventDefault();
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

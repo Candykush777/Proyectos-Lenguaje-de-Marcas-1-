@@ -1,0 +1,42 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 21 nov 2023, 23:57:08
+    author     : Edu
+*/
+legend  {text-align: center;
+         margin-left: 25px;
+        font-family: 'Verdana', sans-serif}
+/*text-aling para alinear el texo al centro de la página en al etiqueta legend
+margin-left: 25px  ; en CSS se utiliza para establecer un margen izquierdo de 25 píxeles para el elemento al que se aplica el estilo
+        font-family: 'Verdana', sans-serif; es el estilo de letra qeu queremos utilizar en esta etiqueta*/
+
+h2 {text-align: center}
+/* */
+h1 {text-align: center;
+    background-color : #D5EBCE;
+    font-family: 'Verdana', sans-serif}
+/*background-color : #D5EBCE para poner un fondo en ese comentario elegido de la paleta de colores */
+
+fieldset {color : brown ;
+          background-color : #D5EBCE;
+           font-weight:bold ;
+           font-family: 'Verdana', sans-serif;}
+               
+        /* font-weight:bold ; para poner el texto dentro de esta etiqueta en negrita */
+          
+ 
+
+ #enviarBtn {
+   display: block;
+   margin: 0 auto;}
+   
+
+  /* Esto establece el tipo de visualización del elemento como bloque. Un elemento de bloque siempre 
+  comienza en una nueva línea y ocupa toda la anchura disponible, estirándose para llenar su contenedor.display: block;
+  
+  margin: 0 auto; En resumen, esta regla CSS se utiliza para centrar horizontalmente un elemento con el ID 
+  enviarBtn y asegurarse de que ocupe todo el ancho disponible en su contenedor.
+  */

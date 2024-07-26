@@ -1,0 +1,116 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 13 feb 2024, 18:35:01
+    Author     : Edu
+*/
+
+body {
+    margin: 0; /* Establece que no haya margen en el borde exterior del cuerpo */
+    padding: 0; /* Establece que no haya relleno dentro del cuerpo */
+    height: 100vh; /* Establece la altura del cuerpo al 100% de la altura de la ventana */
+    background-image: url('im.jpg'); /* Establece la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el cuerpo */
+    background-position: center; /* Centra horizontalmente la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    display: flex; /* Usa un modelo de diseño flexible (flexbox) */
+    justify-content: center; /* Centra horizontalmente los elementos secundarios */
+    align-items: center; /* Centra verticalmente los elementos secundarios */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8) !important; /* Asegura que este estilo tenga prioridad */
+    padding: 5px !important;
+    box-shadow: 0 0 20px 10px rgba(173, 216, 230, 0.5); /* Sombra difuminada */
+    border: 5px solid white;
+    display: flex !important;   /* Alinea los elementos en columna */
+   
+   flex-direction: column !important; /* Muestra los elementos en columna */
+    justify-content: center !important; /* Centra los elementos horizontalmente */
+   align-items: center !important; /* Centra los elementos vertical */
+    width: 90%; /* Utiliza un 90% del ancho de la ventana */
+    max-width: 400px; /* Establece un ancho máximo de 800px */
+    margin: auto; /* Centra el contenedor horizontalmente */
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    margin-bottom: 0.1px; /* Añade un espacio entre los campos */
+    text-align: left;
+    display: block; /* Hace que las etiquetas sean bloques para ocupar toda la anchura disponible */
+     width: 92%; /* Ajusta la anchura de las etiquetas para que ocupen todo el espacio disponible */
+     font-weight: bold; /* Establece el texto de las etiquetas en negrita */
+}
+
+
+form {
+    display: flex; /* Alinea los elementos en columna */
+    flex-direction: column; /* Muestra los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    
+}
+.boton-enviar{
+        background-color: #62aa60; /* Cambia el color de fondo a verde */
+    cursor: pointer; /* Cambia el cursor a una cruz cuando pasa sobre el botón */
+    color: white; /* Cambia el color del texto a negro */
+    font-size: 20px; /* Ajusta el tamaño de la fuente a 20px para hacer el botón más grande */
+    padding: 5px 20px; /* Ajusta el relleno superior e inferior a 15px y el relleno izquierdo y derecho a 0 para que el ancho sea más amplio */
+    width: 300px; /* Ajusta el ancho del botón a 300px */
+    height: auto; /* Mantiene la altura del botón según el contenido */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 7px; /* Ajusta el radio de borde del botón para darle esquinas redondeadas */
+    display: block; /* Hace que el botón sea un bloque para que el ancho pueda ser modificado */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al cambio de color, y así resulta sutil peor interactivo */
+}
+
+.boton-enviar:hover {
+    background-color: #4CAF50; /* Cambia el color de fondo al pasar el cursor, y así resulta sutil peor interactivo */
+}
+
+
+input{
+ border-radius: 3px;
+    display: block;
+    border: 2px solid #eee; /* Define el color del borde */
+    width: 90%; /* Establece el ancho del campo de entrada al 90% del ancho del contenedor */
+    padding: 5px; /* Añade un relleno interno para mejorar la apariencia */
+    margin: 1px auto; /* Añade un margen alrededor del campo de entrada y lo centra horizontalmente */
+    margin-bottom: 10px;
+}
+
+select {
+    border-radius: 3px;
+    display: block;
+    border: 2px solid #eee; /* Define el color del borde */
+    width: 90%; /* Establece el ancho del campo de entrada al 90% del ancho del contenedor */
+    padding: 5px; /* Añade un relleno interno para mejorar la apariencia */
+    margin: 1px auto; /* Añade un margen alrededor del campo de entrada y lo centra horizontalmente */
+    margin-bottom: 10px;
+    
+}
+
+.input-small {
+    width: 30%; /* Establece el ancho del campo de entrada al 30% del contenedor */
+    height: 25px; /* Establece la altura del campo de entrada */
+    font-size: 12px; /* Establece el tamaño de la fuente */
+    padding: 3px; /* Ajusta el relleno para mejorar la apariencia */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+    text-align: left; /* Alinea el texto a la izquierda dentro del campo de entrada */
+
+    margin-left: 5%;
+    
+}
+
+
+
+
+
+
+     
+    

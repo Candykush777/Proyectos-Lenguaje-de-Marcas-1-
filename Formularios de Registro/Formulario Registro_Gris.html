@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+
+    <Style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 300px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #818080;
+            border-radius: 3px;
+            background-color: rgb(245, 247, 246);
+        }
+
+        .form-container {
+
+            padding: 20px;
+            margin-bottom: 10px;
+
+        }
+
+        input[type="text"], input[type="email"],input[type="submit"]{
+
+
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+
+        }
+        input[type="submit"]{
+
+            background-color: rgb(73, 148, 247);
+        }
+
+
+    </Style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+
+            <h2>Formulario de Registro</h2>
+        </div>
+
+        <div class="form-container">
+            <form id="registration-form">
+                <input type="text" id="name" placeholder="Nombre">
+                <input type="email" id="email" placeholder="Correo electrónico">
+                <input type="submit" value="Enviar" onclick="submitForm()">
+            </form>
+
+            <div id="welcome-message"></div>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function submitForm() {
+
+
+            const nameInput = document.getElementById('name').value;
+
+            const welcomeMessage = document.getElementById('welcome-message');
+
+            welcomeMessage.textContent = `¡Bienvenido, ${nameInput}, Gracias por registrate¡`;
+
+            welcomeMessage.style.display = 'block';
+
+            welcomeMessage.style.color = 'red';
+
+            event.preventDefault();
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

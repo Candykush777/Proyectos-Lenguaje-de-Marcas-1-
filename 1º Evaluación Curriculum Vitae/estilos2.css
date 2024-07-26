@@ -1,0 +1,13 @@
+
+/*La font-sizepropiedad establece el tamaño de una fuente.*/
+p {
+    font-size:25px;
+}
+
+h1{
+    color:red;
+}
+
+h2{
+    text-align: center;
+}
